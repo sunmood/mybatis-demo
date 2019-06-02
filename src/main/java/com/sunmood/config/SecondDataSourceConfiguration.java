@@ -17,6 +17,7 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = SecondDataSourceConfiguration.PACKAGE,sqlSessionFactoryRef = "secondSqlSessionFactory")
 public class SecondDataSourceConfiguration {
 
+    //配置使用该数据源的mapper接口包的位置
     static final String PACKAGE = "com.sunmood.mapper.second";
 
     @Bean(name = "secondDataSource")

@@ -7,17 +7,19 @@
 
 hikari:
   primary:
+    poolName: primary #数据库连接池名称，方便测试查看
     driver-class-name: com.mysql.cj.jdbc.Driver
     jdbcUrl: jdbc:mysql://localhost:3306/mp?useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: sunmood
   second:
+    poolName: second #数据库连接池名称，方便测试查看
     driver-class-name: com.mysql.cj.jdbc.Driver
     jdbcUrl: jdbc:mysql://localhost:3306/mp?useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: sunmood
-mybatis:
-  configuration:   #基于注解开发不需要写mapper.xml,因此不需要配置config-location和mapper-locations
-    map-underscore-to-camel-case: true
-#  config-location: classpath:config/mybatis-config.xml   ##基于xml配置mapper开发需要配置mapper-locations
-#  mapper-locations: classpath:mapper/*.xml
+#mybatis:
+#  configuration:   #基于注解开发不需要写mapper.xml,因此不需要配置config-location和mapper-locations
+#    map-underscore-to-camel-case: true
+  config-location: classpath:config/mybatis-config.xml   ##基于xml配置mapper开发需要配置mapper-locations
+  mapper-locations: classpath:mapper/*.xml
